@@ -1,0 +1,64 @@
+<div class="shadow-md bg-grey-lightest">
+  <div class="p-4">
+    <div class="flex item-center justify-between">
+      <h2 class="text-2xl font-bold">{{name}}</h2>
+      <div class="w-6 h-6">
+        {{imgix-image
+            image="identity/mlvk/flower.png"
+            fit='clamp'
+            props="mono=99000000"
+            shouldPrepare=true}}
+      </div>
+    </div>
+    <div class="border-b border-dashed my-4"></div>
+    <h4 class="italic mb-4">A delicious succulent wrap made with cabbage and junk</h4>
+
+    <ul class="list-reset border border-grey-darkest">
+      <h3 class="p-2 text-2xl border-b border-black">Ingredients</h3>
+      <li class="text-1xl py-1 px-2 m-1 border-b border-grey-darkest text-grey-darkest font-bold">
+        <div class="flex items-baseline">
+          <p class="mr-2 italic text-xs">1.</p>
+          <p class="font-bold ">Salt</p>
+        </div>
+      </li>
+
+      <li class="text-1xl py-1 px-2 m-1 border-b border-grey-darkest text-grey-darkest font-bold">
+        <div class="flex items-baseline">
+          <p class="mr-2 italic text-xs">1.</p>
+          <p class="font-bold ">Salt</p>
+        </div>
+      </li>
+
+      <li class="text-1xl py-1 px-2 m-1 border-b border-grey-darkest text-grey-darkest font-bold">
+        <div class="flex items-baseline">
+          <p class="mr-2 italic text-xs">1.</p>
+          <p class="font-bold ">Salt</p>
+        </div>
+      </li>
+
+      <li class="text-1xl py-1 px-2 m-1 border-b border-grey-darkest text-grey-darkest font-bold">
+        <div class="flex items-baseline">
+          <p class="mr-2 italic text-xs">1.</p>
+          <p class="font-bold ">Salt</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="my-4">
+      {{yield (hash
+                nutritionLabel=(component 'cards/nutrition-card'))}}
+    </div>
+  </div>
+
+  <div class="h-64 w-full">
+    {{yield (hash
+              imgix=(component "imgix-image"
+                      image=iamge
+                      fit='crop'
+                      shouldPrepare=true))}}
+  </div>
+
+
+
+
+</div>

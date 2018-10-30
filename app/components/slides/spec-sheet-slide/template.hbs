@@ -1,0 +1,35 @@
+<div class="flex flex-col md:flex-row">
+    {{#cards/product-card
+        name="Smokey BBQ Wrap"
+        as |card|}}
+      {{card.nutritionLabel data=bbqData}}
+      {{card.imgix
+          image="images/wrawp-chorizo-open-box-dot-base.jpg"
+          fpX=0.3
+          fpY=0.7
+        }}
+
+    {{/cards/product-card}}
+
+    {{#cards/product-card
+        name="Pepita Pesto Wrap"
+        as |card|}}
+      {{card.nutritionLabel data=pestoData}}
+      {{card.imgix
+          image="images/pesto-box-az-arm-book-tea4.jpg"
+          fpX=0.5
+          fpY=0.38
+        }}
+    {{/cards/product-card}}
+
+    {{#cards/product-card
+        name="Sunseed Chorizo Wrap"
+        as |card|}}
+      {{card.nutritionLabel data=chorizoData}}
+      {{card.imgix
+          image="images/cu-bbq-box-2.jpg"
+          fpX=0.55
+          fpY=0.4
+        }}
+    {{/cards/product-card}}
+</div>

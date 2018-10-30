@@ -1,0 +1,142 @@
+<div class="flex-col border border-black">
+  <div class="p-2">
+    <p class="text-3xl border-b border-black font-bold">Nutrition Facts</p>
+    <p>{{data.totalServings}} servings per container</p>
+    <div class="flex justify-between border-b-8 border-black pb-2">
+      <p>Serving size</p>
+      <p>{{data.servingSize}}</p>
+    </div>
+
+    <div class="flex justify-between items-end border-b-4 border-black my-2">
+        <div class="flex-col">
+          <p class="font-bold text-sm">Amount per serving</p>
+          <p class="text-2xl font-bold">Calories</p>
+        </div>
+        <div class="flex-col">
+          <p class="text-5xl leading-none font-bold">{{data.calories}}</p>
+        </div>
+    </div>
+
+    <div class="flex justify-end border-b">
+      <p>% Daily Value *%</p>
+    </div>
+    <div class="flex justify-between border-b">
+        <div class="flex">
+          <p class="font-bold mr-2">Total Fat</p>
+          <p>{{data.fat.q}}g</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.fat.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between border-b">
+        <div class="flex ml-2">
+          <p class="mr-2">Saturated Fat</p>
+          <p>{{data.fat.saturated.q}}g</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.fat.saturated.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex border-b">
+        <div class="flex ml-2">
+          <p class="mr-2 italic">Trans Fat</p>
+          <p>{{data.fat.saturated.q}}g</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between border-b">
+        <div class="flex">
+          <p class="font-bold mr-2">Cholesterol</p>
+          <p>{{data.chol.p}}mg</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.chol.q}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between border-b">
+        <div class="flex">
+          <p class="font-bold mr-2">Sodium</p>
+          <p>{{data.sodium.q}}mg</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.sodium.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between border-b">
+        <div class="flex">
+          <p class="font-bold mr-2">Total Carbohydrate</p>
+          <p>{{data.carb.q}}g</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.carb.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between border-b">
+        <div class="flex ml-2">
+          <p class="mr-2">Dietary Fiber</p>
+          <p>{{data.carb.fiber.q}}g</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.carb.fiber.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex border-b ml-2">
+        <div class="flex">
+          <p class="mr-2">Total Sugars</p>
+          <p>{{data.carb.sugar.q}}g</p>
+        </div>
+    </div>
+    <div class="flex justify-between border-b ml-4">
+        <div class="flex">
+          <p class="mr-2">Includes {{data.carb.added.q}}g Added Sugar</p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">{{data.carb.added.p}}</p>
+          <p class="bold">%</p>
+        </div>
+    </div>
+
+    <div class="flex border-b-8 border-black">
+        <div class="flex ml-2 mb-1">
+          <p class="mr-2 font-bold">Protein</p>
+          <p>{{data.protein.q}}g</p>
+        </div>
+    </div>
+
+    <div class="border-b-4 border-black mt-1 text-sm">
+      <div class="flex justify-between border-b">
+        <p class="mr-2">Vitamin D {{data.vitamins.d.q}}mcg</p>
+        <p class="">{{data.vitamins.d.p}}%</p>
+      </div>
+      <div class="flex justify-between border-b">
+        <p class="mr-2">Calcium {{data.vitamins.calcium.q}}mcg</p>
+        <p class="">{{data.vitamins.calcium.p}}%</p>
+      </div>
+      <div class="flex justify-between border-b">
+        <p class="mr-2">Iron {{data.vitamins.iron.q}}mcg</p>
+        <p class="">{{data.vitamins.iron.p}}%</p>
+      </div>
+      <div class="flex justify-between border-b">
+        <p class="mr-2">Potassium {{data.vitamins.potassium.q}}mcg</p>
+        <p class="">{{data.vitamins.potassium.p}}%</p>
+      </div>
+    </div>
+    <p class="text-xs my-2">
+      The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+    </p>
+
+  </div>
+</div>
