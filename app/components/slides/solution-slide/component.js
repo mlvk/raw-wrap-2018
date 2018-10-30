@@ -4,22 +4,18 @@ import { Howl } from 'howler';
 
 export default class SlidesSolutionSlideComponent extends GenericSlide {
 
+  queued = false;
+
   animate() {
     this.get('typewriter').start();
 
-    console.log(this.get('playedAudio'));
-
     if(!this.get('playedAudio')) {
-
       this.get('sound').play();
     }
   }
 
   pause() {
     this.get('typewriter').stop();
-
-    console.log('Called paue');
-
     this.get('sound').pause();
   }
 

@@ -1,12 +1,10 @@
 import GenericSlide from 'whatisfood/components/generic-slide/component';
 import Typewriter from 'typewriter-effect/dist/core';
 
-export default class SlidesSolutionSlideComponent extends GenericSlide {
+export default class SlidesProblemSlideComponent extends GenericSlide {
 
   animate() {
     this.get('typewriter').start();
-
-    console.log(this.get('playedAudio'));
 
     if(!this.get('playedAudio')) {
 
@@ -16,9 +14,6 @@ export default class SlidesSolutionSlideComponent extends GenericSlide {
 
   pause() {
     this.get('typewriter').stop();
-
-    console.log('Called paue');
-
     this.get('sound').pause();
   }
 

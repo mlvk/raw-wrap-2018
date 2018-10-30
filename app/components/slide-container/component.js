@@ -37,6 +37,7 @@ export default class SlideContainer extends Component {
         }
       })
       .onStepExit(data => {
+        console.log(data);
         const currentSlide = slides.find(s => s.element === data.element);
         if(currentSlide) {
           currentSlide.setInactive();

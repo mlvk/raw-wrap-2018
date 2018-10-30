@@ -2,6 +2,8 @@ import Component from '@ember/component';
 import { className } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { guidFor } from '@ember/object/internals';
+import { restartableTask } from 'ember-concurrency-decorators';
+import { timeout } from 'ember-concurrency';
 
 export default class GenericSlideComponent extends Component{
   @className slide = 'slide';
@@ -47,12 +49,32 @@ export default class GenericSlideComponent extends Component{
     //Override
   }
 
+  @restartableTask({maxConcurrency: 1})
+  _animate = function * () {
+    yield timeout(100);
+    this.animate();
+  }
+
+  _pause() {
+    this._animate.cancelAll();
+    this.pause();
+  }
+
   buildSelector(partial) {
     return `.${this.get('animationId')} ${partial}`;
   }
 
   setActive() {
-    this.set('shouldPrepare', true);
+    console.log('!!!!!!');
+    this._setActive.perform();
+  }
+
+  @restartableTask({maxConcurrency: 1})
+  _setActive = function * () {
+    yield timeout(350);
+
+    this.prepare();
+
     this.set('active', true);
 
     this._processReadinessChanged();
@@ -60,17 +82,20 @@ export default class GenericSlideComponent extends Component{
 
   _processReadinessChanged() {
     if(this.isReady() && this.get('active')) {
-      this.animate();
+      this._animate.perform();
     }
   }
 
   setInactive() {
+    this._setActive.cancelAll();
     this.set('active', false);
-    this.pause();
+    this._pause();
   }
 
   prepare() {
-    this.set('shouldPrepare', true);
+    if(!this.get('shouldPrepare')) {
+      this.set('shouldPrepare', true);
+    }
   }
 
   progress(percentage) {
