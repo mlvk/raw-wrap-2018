@@ -4,7 +4,7 @@ import { action } from '@ember-decorators/object';
 import { attribute } from '@ember-decorators/component';
 import { notEmpty } from '@ember-decorators/object/computed';
 
-export default class SlidesLandingSlideComponent extends GenericSlide {
+export default class SlidesImageTitleSlideComponent extends GenericSlide {
 
   animate() {
     TweenMax.to(this.buildSelector('.fade-in'), 1, {opacity:1});

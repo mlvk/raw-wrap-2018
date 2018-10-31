@@ -1,42 +1,4 @@
-<div class="slide-container">
-  {{slides/landing-slide registerMe}}
-
-  {{#slides/image-title-slide registerMe
-      color='blue'
-      position="items-center justify-center"
-      text="Raw Wrap say hello to Fresh!"
-      as |slide|}}
-        {{slide.imgix
-            image="images/wrawp-open-3-line-1-v3.jpg"
-            fpX=0.5
-            fpY=0.55}}
-  {{/slides/image-title-slide}}
-
-  {{slides/intro-slide registerMe}}
-  {{slides/problem-slide registerMe}}
-  {{slides/solution-slide registerMe}}
-
-  {{#slides/image-title-slide registerMe
-      color='red'
-      position="items-start justify-start"
-      as |slide|}}
-        {{slide.imgix
-            image="images/wrawp-open-3-line-1-v3.jpg"
-            fpX=0.67
-            fpY=0.55}}
-  {{/slides/image-title-slide}}
-
-  {{#slides/image-title-slide registerMe
-      color='purple'
-      position="items-start justify-start"
-      text="Product Details"
-      as |slide|}}
-        {{slide.imgix
-            image="images/127.jpg"
-            fpX=0.67
-            fpY=0.55}}
-  {{/slides/image-title-slide}}
-
-  {{slides/spec-sheet-slide registerMe}}
-
-</div>
+{{yield (hash
+          slide=(component 'slide-generator'
+                  slideMgr=this
+                  registerFunc=registerMe))}}

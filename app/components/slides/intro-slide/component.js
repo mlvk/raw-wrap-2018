@@ -30,7 +30,6 @@ export default class SlidesIntroSlideComponent extends GenericSlide {
   }
 
   _initPlayer() {
-    console.log('Called');
     const player = new jwplayer('player');
     this.set('player', player);
   }

@@ -14,7 +14,7 @@ export default class GenericSlideComponent extends Component{
     return guidFor(this);
   }
 
-  static positionalParams = ['registerFunc'];
+  // static positionalParams = ['registerFunc'];
 
   setup(){
     // Override
@@ -49,6 +49,10 @@ export default class GenericSlideComponent extends Component{
     //Override
   }
 
+  nestSlide() {
+    this.get('slideMgr').moveToNextSlide();
+  }
+
   @restartableTask({maxConcurrency: 1})
   _animate = function * () {
     yield timeout(100);
@@ -65,7 +69,6 @@ export default class GenericSlideComponent extends Component{
   }
 
   setActive() {
-    console.log('!!!!!!');
     this._setActive.perform();
   }
 
