@@ -1,4 +1,4 @@
-import GenericSlide from 'whatisfood/components/generic-slide/component';
+import GenericSlide from 'mlvk/components/generic-slide/component';
 import Typewriter from 'typewriter-effect/dist/core';
 import { Howl } from 'howler';
 

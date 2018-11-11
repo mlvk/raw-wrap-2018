@@ -14,7 +14,7 @@ export default Component.extend(ResizeAware, {
   fpY: 0.5,
   fpZ: 1,
   fpDebug: false,
-  quality: 100,
+  quality: 1,
   fit: 'crop',
   crop: 'focalpoint',
   attrs: '',

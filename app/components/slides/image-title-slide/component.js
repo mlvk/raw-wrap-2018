@@ -1,4 +1,4 @@
-import GenericSlide from 'whatisfood/components/generic-slide/component';
+import GenericSlide from 'mlvk/components/generic-slide/component';
 import { TweenMax } from "gsap/TweenMax";
 import { action } from '@ember-decorators/object';
 import { attribute } from '@ember-decorators/component';

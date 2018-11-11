@@ -14,8 +14,6 @@ export default class GenericSlideComponent extends Component{
     return guidFor(this);
   }
 
-  // static positionalParams = ['registerFunc'];
-
   setup(){
     // Override
   }
@@ -96,6 +94,7 @@ export default class GenericSlideComponent extends Component{
   }
 
   prepare() {
+    console.log("Prepare Slide");
     if(!this.get('shouldPrepare')) {
       this.set('shouldPrepare', true);
     }

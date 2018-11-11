@@ -716,23 +716,23 @@ export default class SlidesSpecSheetSlideComponent extends GenericSlide {
     "tags": ""
   }
 
-  animate() {
-    TweenMax.to(this.buildSelector('.fade-in'), 1, {opacity:1});
-  }
+  // animate() {
+  //   TweenMax.to(this.buildSelector('.fade-in'), 1, {opacity:1});
+  // }
+  //
+  // isReady() {
+  //   return this.get('productImageReady') && this.get('logoReady');
+  // }
 
-  isReady() {
-    return this.get('productImageReady') && this.get('logoReady');
-  }
-
-  @action
-  productImageReady() {
-    this.set('productImageReady', true);
-    this.notifyReadyChanged();
-  }
-
-  @action
-  logoReady() {
-    this.set('logoReady', true);
-    this.notifyReadyChanged();
-  }
+  // @action
+  // productImageReady() {
+  //   this.set('productImageReady', true);
+  //   this.notifyReadyChanged();
+  // }
+  //
+  // @action
+  // logoReady() {
+  //   this.set('logoReady', true);
+  //   this.notifyReadyChanged();
+  // }
 }
